@@ -7,7 +7,9 @@ export default function Header() {
   return (
 <header className="w-full flex justify-between items-center px-6 py-5 sm:px-6 sm:py-4 lg:px-18 lg:py-6 bg-white z-50">
       <h1 className="text-3xl tracking-[4px]  font-thin leading-none">
+        <Link href={"/"}>
         VOLUME
+        </Link>
       </h1>
 
       {/* Desktop Nav */}
@@ -47,7 +49,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="absolute top-0 left-0 w-full px-6 py-8 md:hidden animate-slideDown shadow-sm">
+        <div className="absolute top-0 left-0 w-full px-6 py-8 mt-8 md:hidden animate-slideDown ">
           <div className="flex mt-10 flex-wrap justify-center gap-x-6 gap-y-8 font-light text-xs tracking-wider text-gray-800">
             <Link href="#" onClick={() => setMenuOpen(false)}>
               Why are you here?

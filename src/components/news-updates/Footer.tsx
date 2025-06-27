@@ -15,7 +15,7 @@ import {
 
 export default function FooterSection() {
   return (
-    <footer className="bg-white py-3 px-4 relative w-full overflow-hidden mt-8">
+    <footer className="bg-white py-3 px-4 relative w-full overflow-hidden mt-8 mb-10">
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -25,7 +25,7 @@ export default function FooterSection() {
       >
         {/* Logo */}
         <div className="mb-4 flex justify-center">
-         <Link href={"/"}>
+            <Link href={"/"}>
           <Image
             src="/logo.png"
             alt="Volume Logo"
@@ -43,18 +43,9 @@ export default function FooterSection() {
         </p>
 
         {/* Phone Numbers */}
-        <div className="flex justify-center items-center text-xs font-light">
-  <div className="relative group cursor-pointer">
-    <span className="text-black">+91 9599642475 &nbsp; &nbsp; &nbsp;</span>
-    <span className="absolute left-1/2 -bottom-0.5 h-[3px] bg-orange-500 transition-all duration-300 origin-center transform -translate-x-1/2 w-0 group-hover:w-full"></span>
-  </div>
-
-  <div className="relative group cursor-pointer">
-    <span className="text-black">+91 (011) 41814455</span>
-    <span className="absolute left-1/2 -bottom-0.5 h-[3px] bg-orange-500 transition-all duration-300 origin-center transform -translate-x-1/2 w-0 group-hover:w-full"></span>
-  </div>
-</div>
-
+        <p className="text-xs font-light">
+          +91 9599642475 &nbsp;&nbsp;&nbsp; +91 (011) 41814455
+        </p>
 
         {/* Social Icons */}
         <div className="flex justify-center gap-8 mt-10 text-xl text-black">
@@ -78,26 +69,6 @@ export default function FooterSection() {
           </Link>
         </div>
       </motion.div>
-
-      {/* Blogs & Location Section*/}
-      <div className="mt-12 mr-0 sm:mr-20">
-        <div className="text-right text-[10px] sm:text-xs">
-          <p className="text-[9px] uppercase text-gray-500 mb-6 mt-5">
-            Our Thoughts Served Hot
-          </p>
-          <Link
-            href="/blog"
-            className="text-blue-700 font-bold text-[10px] tracking-[3px] uppercase mb-8 block"
-          >
-            Blogs
-          </Link>
-          <p className="tracking-[2px] text-[10px]">
-            <span className="font-semibold">Locations:</span>{" "}
-            <span className="text-blue-700 font-semibold">Delhi</span> |{" "}
-            <span className="text-blue-700 font-semibold">Mumbai</span>
-          </p>
-        </div>
-      </div>
     </footer>
   );
 }
