@@ -12,7 +12,7 @@ export default function ConnectSection() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="bg-black text-white w-auto max-w-[1665px] px-4 py-16 text-center"
+        className="bg-black text-white w-screen max-w-[1665px] px-4 py-16 text-center"
       >
         <div className="w-12 h-12 mx-auto mb-5 relative">
           <Image
