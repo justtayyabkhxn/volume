@@ -25,14 +25,14 @@ export default function FooterSection() {
       >
         {/* Logo */}
         <div className="mb-4 flex justify-center">
-         <Link href={"/"}>
-          <Image
-            src="/logo.png"
-            alt="Volume Logo"
-            width={170}
-            height={170}
-            className="object-contain"
-          />
+          <Link href={"/"}>
+            <Image
+              src="/logo.png"
+              alt="Volume Logo"
+              width={170}
+              height={170}
+              className="object-contain"
+            />
           </Link>
         </div>
 
@@ -44,17 +44,17 @@ export default function FooterSection() {
 
         {/* Phone Numbers */}
         <div className="flex justify-center items-center text-xs font-light">
-  <div className="relative group cursor-pointer">
-    <span className="text-black">+91 9599642475 &nbsp; &nbsp; &nbsp;</span>
-    <span className="absolute left-1/2 -bottom-0.5 h-[3px] bg-orange-500 transition-all duration-300 origin-center transform -translate-x-1/2 w-0 group-hover:w-full"></span>
-  </div>
-
-  <div className="relative group cursor-pointer">
-    <span className="text-black">+91 (011) 41814455</span>
-    <span className="absolute left-1/2 -bottom-0.5 h-[3px] bg-orange-500 transition-all duration-300 origin-center transform -translate-x-1/2 w-0 group-hover:w-full"></span>
-  </div>
-</div>
-
+          <div className="relative group cursor-pointer">
+            <span className="text-black">
+              +91 9599642475 &nbsp; &nbsp; &nbsp;
+            </span>
+            <span className="absolute left-1/2 -bottom-0.5 h-[3px] bg-orange-500 transition-all duration-300 origin-center transform -translate-x-1/2 w-0 group-hover:w-full"></span>
+          </div>
+          <div className="relative group cursor-pointer">
+            <span className="text-black">+91 (011) 41814455</span>
+            <span className="absolute left-1/2 -bottom-0.5 h-[3px] bg-orange-500 transition-all duration-300 origin-center transform -translate-x-1/2 w-0 group-hover:w-full"></span>
+          </div>
+        </div>
 
         {/* Social Icons */}
         <div className="flex justify-center gap-8 mt-10 text-xl text-black">

@@ -11,6 +11,15 @@ import {
 } from "react-icons/fa";
 
 export default function NewsSocialSection() {
+  const socialIcons = [
+    FaFacebookF,
+    FaTwitter,
+    FaVimeoV,
+    FaTumblr,
+    FaYoutube,
+    FaInstagram,
+    FaLinkedinIn,
+  ];
   return (
     <section className="px-6 py-16 sm:px-16 sm:py-20 max-w-5xl mx-auto text-center text-black font-light">
       {/* News and Updates Section */}
@@ -40,24 +49,15 @@ export default function NewsSocialSection() {
 
         {/* Icons Row */}
         <div className="flex flex-wrap justify-center gap-x-16 gap-y-15 sm:gap-x-15 sm:gap-y-0 mt-15 sm:mt-10 max-w-xs mx-auto sm:max-w-full">
-  {[
-    <FaFacebookF />,
-    <FaTwitter />,
-    <FaVimeoV />,
-    <FaTumblr />,
-    <FaYoutube />,
-    <FaInstagram />,
-    <FaLinkedinIn />,
-  ].map((Icon, index) => (
-    <div
-      key={index}
-      className="w-7 h-7 sm:w-8 sm:h-8 bg-black rounded-full flex items-center justify-center text-white text-base sm:text-lg"
-    >
-      {Icon}
-    </div>
-  ))}
-</div>
-
+          {socialIcons.map((Icon, index) => (
+            <div
+              key={index}
+              className="w-7 h-7 sm:w-8 sm:h-8 bg-black rounded-full flex items-center justify-center text-white text-base sm:text-lg"
+            >
+              <Icon />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

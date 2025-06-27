@@ -6,6 +6,7 @@ import SlideUp from "../SlideUp";
 
 const posts = [
   {
+    id:"1",
     title: "SYMPHONIES LIFE",
     subtitle: "Branding Case Study",
     description:
@@ -14,6 +15,7 @@ const posts = [
     link: "#",
   },
   {
+    id:"2",
     title: "IN SAFE HANDS KANPEKI YEAR SIX",
     subtitle: "Spatial Branding",
     description:
@@ -22,6 +24,7 @@ const posts = [
     link: "#",
   },
   {
+    id:"3",
     title: "KITSA",
     subtitle: "Branding Case Study",
     description:
@@ -30,6 +33,7 @@ const posts = [
     link: "#",
   },
   {
+    id:"4",
     title: "HOMSARA",
     subtitle: "Branding Case Study",
     description:
@@ -38,6 +42,7 @@ const posts = [
     link: "#",
   },
   {
+    id:"5",
     title: "GYPSY SYRUP",
     subtitle: "Branding Case Study",
     description:
@@ -46,6 +51,7 @@ const posts = [
     link: "#",
   },
   {
+    id:"6",
     title: "THE BLUE",
     subtitle: "Branding Case Study",
     description:
@@ -54,6 +60,7 @@ const posts = [
     link: "#",
   },
   {
+    id:"7",
     title: "BISNAC",
     subtitle: "Branding Case Study",
     description:
@@ -62,6 +69,7 @@ const posts = [
     link: "#",
   },
   {
+    id:"8",
     title: "MERCH COMMUNICATION FOR THE COFFEE BEAN & TEA LEAF®",
     subtitle: "India Merch Launch",
     description:
@@ -70,6 +78,7 @@ const posts = [
     link: "#",
   },
   {
+    id:"9",
     title: "SHOW COMMUNICATION DESIGN FOR WARNER BROS. DISCOVERY",
     subtitle: "Campaign Story",
     description:
@@ -78,6 +87,7 @@ const posts = [
     link: "#",
   },
   {
+    id:"10",
     title: "'FLAVORS OF JOY' BY THE COFFEE BEAN & TEA LEAF®",
     subtitle: "Spatial Branding",
     description: `We conceptualised the "Flavors of Joy" holiday campaign for The Coffee Bean & Tea Leaf®, designing a strategy to immerse customers in a joyful experience, reflecting the brand's commitment to spreading holiday cheer through their offerings.`,
@@ -85,6 +95,7 @@ const posts = [
     link: "#",
   },
   {
+    id:"11",
     title: "INTRODUCING A CHIC BODY CARE RANGE BY HOTTEST EX",
     subtitle: "Product Range Launch",
     description:
@@ -93,6 +104,7 @@ const posts = [
     link: "#",
   },
   {
+    id:"12",
     title: "5 NATIONAL AWARDS",
     subtitle: "Announcement",
     description:
@@ -101,6 +113,7 @@ const posts = [
     link: "#",
   },
   {
+    id:"13",
     title: "PROJECT T",
     subtitle: "Branding Case Study",
     description:
@@ -109,6 +122,7 @@ const posts = [
     link: "#",
   },
   {
+    id:"14",
     title: "THE COFFEE BEAN & TEA LEAF®",
     subtitle: "Announcement",
     description:
@@ -117,6 +131,7 @@ const posts = [
     link: "#",
   },
   {
+    id:"15",
     title: "SOPHIC",
     subtitle: "Branding Case Study",
     description:
@@ -125,6 +140,7 @@ const posts = [
     link: "#",
   },
   {
+    id:"16",
     title: "SOL",
     subtitle: "Branding Case Study",
     description:
@@ -133,6 +149,7 @@ const posts = [
     link: "#",
   },
   {
+    id:"17",
     title: "SIPGEL",
     subtitle: "Branding Case Study",
     description:
@@ -141,6 +158,7 @@ const posts = [
     link: "#",
   },
   {
+    id:"18",
     title: "DISHA PUBLICATION",
     subtitle: "Branding Case Study",
     description:
@@ -150,6 +168,7 @@ const posts = [
   },
 
   {
+    id:"19",
     title: "UNGLITCH",
     subtitle: "Branding Case Study",
     description: `We developed a cutting-edge brand configuration for Unglitch, a premier tech repair and maintenance service, embodying the mantra "To err is human, to undo tech-support," positioning itself as an authority against tech glitches.`,
@@ -158,6 +177,7 @@ const posts = [
   },
 
   {
+    id:"20",
     title: "MAX SQUARE",
     subtitle: "Brochure Designing",
     description:
@@ -182,9 +202,9 @@ export default function RecentPosts() {
       </SlideUp>
 
       <div className="grid md:grid-cols-2 gap-12 sm:px-28">
-        {posts.map((post, index) => (
-          <SlideUp>
-            <div key={index} className="px-1 ">
+        {posts.map((post) => (
+          <SlideUp key={post.id} >
+            <div key={post.id} className="px-1 ">
               <div className="relative w-full h-[250px] md:h-[340px]">
                 {" "}
                 {/* Adjustable height */}

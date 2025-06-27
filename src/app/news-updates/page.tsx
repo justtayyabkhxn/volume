@@ -5,18 +5,17 @@ import FooterSection from "@/components/news-updates/Footer";
 import RecentPosts from "@/components/news-updates/RecentPosts";
 import TopSection from "@/components/news-updates/TopSection";
 
-
 export default function NewsUpdates() {
   return (
     <main className=" flex flex-col items-center justify-space bg-white ">
       {/* Navbar */}
       <Header />
       {/* Section A */}
-      <TopSection/>
+      <TopSection />
       {/* RecentPosts */}
-      <RecentPosts/>
+      <RecentPosts />
       {/* Footer */}
-      <FooterSection/>
+      <FooterSection />
     </main>
   );
 }
