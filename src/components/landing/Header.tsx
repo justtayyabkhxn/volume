@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -6,11 +6,9 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-<header className="w-full flex justify-between items-center px-6 py-5 sm:px-6 sm:py-4 lg:px-18 lg:py-6 bg-white z-50">
+    <header className="w-full flex justify-between items-center px-6 py-5 sm:px-6 sm:py-4 lg:px-18 lg:py-6 bg-white z-50">
       <h1 className="text-3xl tracking-[4px]  font-thin leading-none">
-        <Link href={"/"}>
-        VOLUME
-        </Link>
+        <Link href={"/"}>VOLUME</Link>
       </h1>
 
       {/* Desktop Nav */}
@@ -61,9 +59,9 @@ export default function Header() {
             <Link href="#" onClick={() => setMenuOpen(false)}>
               Want to feel better?
             </Link>
-            <Link href="#" onClick={() => setMenuOpen(false)}>
+            <a href="news-updates" onClick={() => setMenuOpen(false)}>
               What’s happening?
-            </Link>
+            </a>
             <Link href="#" onClick={() => setMenuOpen(false)}>
               Contact Us
             </Link>

@@ -5,7 +5,7 @@ import SlideUp from "../SlideUp";
 export default function ComfortSleepSection() {
   return (
     <SlideUp>
-      <section className="py-20 px-6 sm:px-20 max-w-6xl mx-auto space-y-24">
+      <section className="py-2 px-6 sm:px-20 max-w-6xl mx-auto space-y-24">
         {/* Top Section - Comfort */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* GIF */}
@@ -38,7 +38,7 @@ export default function ComfortSleepSection() {
             <Image
               src="/pillow.gif"
               alt="Symphonies Pillow Animation"
-              width={550}
+              width={497}
               height={550}
             />
           </div>

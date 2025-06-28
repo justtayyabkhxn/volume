@@ -21,7 +21,7 @@ export default function NewsSocialSection() {
     FaLinkedinIn,
   ];
   return (
-    <section className="px-6 py-16 sm:px-16 sm:py-20 max-w-5xl mx-auto text-center text-black font-light">
+    <section className="px-6 py-16 sm:px-16 sm:py-20 max-w-5xl mt-12 mx-auto text-center text-black font-light">
       {/* News and Updates Section */}
       <div className="max-w-3xl mx-auto text-left mb-14 px-0 sm:px-10">
         <p className="tracking-[1px] text-[12px] text-gray-500 mb-2">

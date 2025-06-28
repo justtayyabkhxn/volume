@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function VideoSection() {
   return (
-    <section className="py-16 px-0 sm:py-16 sm:px-6 text-left">
+    <section className="py-16 px-0 sm:py-16 mt-10 sm:px-6 text-left">
       <h2 className="text-orange-500 text-2xl sm:text-4xl tracking-[12px] font-light mb-4 ml-4 sm:ml-0 ">
         SYMPHONIES LIFE
       </h2>

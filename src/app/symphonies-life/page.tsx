@@ -1,6 +1,7 @@
 import ComfortSleepSection from "@/components/case-study/ComfortSleepSection";
 import FooterSection from "@/components/case-study/Footer";
 import FourBoxContent from "@/components/case-study/FourBoxContent";
+import GifGrid from "@/components/case-study/GifGrid";
 import NewsletterSignup from "@/components/case-study/NewsLetter";
 import VideoSection from "@/components/case-study/VideoSection";
 import VideoSection2 from "@/components/case-study/VideoSection2";
@@ -19,6 +20,8 @@ export default function CaseStudy() {
       <VideoSection2/>
       {/* Comfort Sleep */}
       <ComfortSleepSection/>
+      {/* GifGrid */}
+      <GifGrid/>
       {/* NewsLetter */}
       <NewsletterSignup/>
       {/* Footer */}
