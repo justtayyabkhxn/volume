@@ -82,7 +82,7 @@ export default function EditCaseStudy() {
         <h1 className="text-2xl font-semibold">Edit Case Study</h1>
         <button
           onClick={() => router.push("/admin/dashboard")}
-          className="text-sm bg-gray-200 hover:bg-gray-300 text-black px-4 py-2 rounded"
+          className="text-sm bg-gray-200 hover:bg-gray-300 cursor-pointer text-black px-4 py-2 rounded"
         >
           ← Go Back
         </button>
@@ -127,7 +127,7 @@ export default function EditCaseStudy() {
 
         <button
           onClick={handleSubmit}
-          className="bg-orange-500 hover:bg-orange-600 px-6 py-2 text-white rounded"
+          className="bg-orange-500 hover:bg-orange-600 cursor-pointer px-6 py-2 text-white rounded"
         >
           Save Changes
         </button>

@@ -24,9 +24,9 @@ export default function Header() {
         <Link href="#" className="hover:text-orange-400 tracking-wide">
           Want to feel better?
         </Link>
-        <Link href="/news-updates" className="hover:text-orange-400 tracking-wide">
+        <a href="/news-updates" className="hover:text-orange-400 tracking-wide">
           What’s happening?
-        </Link>
+        </a>
         <Link href="#" className="hover:text-orange-400 tracking-wide">
           Contact Us
         </Link>

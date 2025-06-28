@@ -16,7 +16,7 @@ type CaseStudy = {
 
 export default function AdminPage() {
   const [cases, setCases] = useState<CaseStudy[]>([]);
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({
     title: "",
@@ -24,6 +24,9 @@ export default function AdminPage() {
     description: "",
     image: "",
   });
+
+  const [updatingId, setUpdatingId] = useState<string | null>(null);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
 
   const router = useRouter();
   const token =
@@ -43,7 +46,7 @@ export default function AdminPage() {
       .then((res) => res.json())
       .then(setCases)
       .catch((err) => console.error("Fetch error:", err))
-      .finally(() => setLoading(false)); 
+      .finally(() => setLoading(false));
   }, [token]);
 
   const handleChange = (
@@ -74,6 +77,7 @@ export default function AdminPage() {
   };
 
   const toggleLive = async (id: string, current: boolean) => {
+    setUpdatingId(id);
     await fetch(`/api/casestudies/${id}`, {
       method: "PATCH",
       headers: {
@@ -82,16 +86,19 @@ export default function AdminPage() {
       },
       body: JSON.stringify({ live: !current }),
     });
+    setUpdatingId(null);
     location.reload();
   };
 
   const handleDelete = async (id: string) => {
+    setDeletingId(id);
     await fetch(`/api/casestudies/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,
       },
     });
+    setDeletingId(null);
     location.reload();
   };
 
@@ -114,7 +121,7 @@ export default function AdminPage() {
 
       <button
         onClick={() => setShowForm(!showForm)}
-        className="mb-6 px-6 py-2 bg-black text-white rounded hover:bg-gray-800 transition"
+        className="mb-6 px-6 py-2 bg-black text-white cursor-pointer rounded hover:bg-gray-800 transition"
       >
         {showForm ? "Cancel" : "+ Add New Case Study"}
       </button>
@@ -155,7 +162,7 @@ export default function AdminPage() {
           />
           <button
             onClick={handleSubmit}
-            className="bg-orange-500 px-6 py-2 text-white rounded hover:bg-orange-600 transition"
+            className="bg-orange-500 px-6 py-2 text-white cursor-pointer rounded hover:bg-orange-600 transition"
           >
             Submit
           </button>
@@ -177,13 +184,18 @@ export default function AdminPage() {
               <div className="flex flex-wrap gap-3 mt-3">
                 <button
                   onClick={() => toggleLive(cs._id, cs.live)}
+                  disabled={updatingId === cs._id}
                   className={`text-sm px-4 py-1 rounded font-medium transition cursor-pointer ${
                     cs.live
                       ? "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
                       : "bg-green-100 text-green-800 hover:bg-green-200"
-                  }`}
+                  } ${updatingId === cs._id ? "opacity-50 cursor-not-allowed" : ""}`}
                 >
-                  {cs.live ? "🔕 Make Inactive" : "✅ Make Active"}
+                  {updatingId === cs._id
+                    ? "Working..."
+                    : cs.live
+                    ? "🔕 Make Inactive"
+                    : "✅ Make Active"}
                 </button>
 
                 <Link
@@ -195,9 +207,12 @@ export default function AdminPage() {
 
                 <button
                   onClick={() => handleDelete(cs._id)}
-                  className="text-sm px-4 py-1 cursor-pointer rounded bg-red-500 text-white hover:bg-red-600 transition"
+                  disabled={deletingId === cs._id}
+                  className={`text-sm px-4 py-1 cursor-pointer rounded bg-red-500 text-white hover:bg-red-600 transition ${
+                    deletingId === cs._id ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
                 >
-                  🗑️ Delete
+                  {deletingId === cs._id ? "Deleting..." : "🗑️ Delete"}
                 </button>
               </div>
             </li>
