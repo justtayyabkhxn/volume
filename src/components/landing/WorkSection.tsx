@@ -91,6 +91,7 @@ export default function WorkSection() {
                     alt={project.title}
                     width={470}
                     height={570}
+                    unoptimized
                     className="w-full h-auto object-cover cursor-pointer transition-transform duration-300 ease-in-out hover:scale-90"
                   />
                 </Link>

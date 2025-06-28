@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import { useState } from "react";
 
@@ -23,7 +24,7 @@ export default function Header() {
         <Link href="#" className="hover:text-orange-400 tracking-wide">
           Want to feel better?
         </Link>
-        <Link href="#" className="hover:text-orange-400 tracking-wide">
+        <Link href="/news-updates" className="hover:text-orange-400 tracking-wide">
           What’s happening?
         </Link>
         <Link href="#" className="hover:text-orange-400 tracking-wide">
