@@ -7,7 +7,7 @@ const projects = [
     title: "SYMPHONIES LIFE",
     subtitle: "BRANDING CASE STUDY",
     src: "/symphonies.jpg",
-    link: "/symphonies-life-case-study",
+    link: "/symphonies-life",
   },
   {
     title: "KITSA",
