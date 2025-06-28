@@ -22,7 +22,7 @@ export default function AdminPage() {
     title: "",
     subtitle: "",
     description: "",
-    image: "",
+    image: "/default-image.jpg", // default image path
   });
 
   const [updatingId, setUpdatingId] = useState<string | null>(null);
@@ -144,14 +144,18 @@ export default function AdminPage() {
             onChange={handleChange}
             className="w-full px-3 py-2 border rounded"
           />
-          <input
-            type="text"
-            name="image"
-            placeholder="Image URL (e.g., /symphonieslife-rc.png)"
-            value={formData.image}
-            onChange={handleChange}
-            className="w-full px-3 py-2 border rounded"
-          />
+          <div>
+            <label className="block text-sm text-gray-700 mb-1">
+              Image URL (default image will be used and cannot be changed):
+            </label>
+            <input
+              type="text"
+              name="image"
+              value={formData.image}
+              readOnly
+              className="w-full px-3 py-2 border rounded bg-gray-100 text-gray-500 cursor-not-allowed"
+            />
+          </div>
           <textarea
             name="description"
             placeholder="Description"
@@ -170,14 +174,13 @@ export default function AdminPage() {
       )}
 
       {loading ? (
-        <p className="text-center text-gray-500 py-10">Loading case studies...</p>
+        <p className="text-center text-gray-500 py-10">
+          Loading case studies...
+        </p>
       ) : (
         <ul className="space-y-4">
           {cases.map((cs) => (
-            <li
-              key={cs._id}
-              className="border p-5 rounded shadow-sm bg-white"
-            >
+            <li key={cs._id} className="border p-5 rounded shadow-sm bg-white">
               <h2 className="text-xl font-semibold">{cs.title}</h2>
               <p className="text-sm text-gray-600">{cs.subtitle}</p>
               <p className="text-xs text-gray-400 italic mb-2">🔗 {cs.link}</p>
@@ -189,7 +192,9 @@ export default function AdminPage() {
                     cs.live
                       ? "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
                       : "bg-green-100 text-green-800 hover:bg-green-200"
-                  } ${updatingId === cs._id ? "opacity-50 cursor-not-allowed" : ""}`}
+                  } ${
+                    updatingId === cs._id ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
                 >
                   {updatingId === cs._id
                     ? "Working..."
